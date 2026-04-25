@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lookbook — Ayeyi Oye</title>
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/lookbook.css">
+</head>
+<body>
+
+<!-- ── NAVIGATION ── -->
+<nav>
+  <a class="nav-logo" href="../index.html">Ayeyi Oye</a>
+  <ul class="nav-links">
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="collection.html">Collection</a></li>
+    <li><a href="lookbook.html">Lookbook</a></li>
+    <li><a href="about.html">Our Story</a></li>
+    <li><a href="contact.html">Order</a></li>
+  </ul>
+  <button class="nav-cart" onclick="showCart()">🛍 Cart (<span id="cart-count">0</span>)</button>
+</nav>
+
+<!-- ── LOOKBOOK ── -->
+<section id="lookbook-page">
+  <div class="section-header">
+    <span class="section-tag">— Lookbook —</span>
+    <h1 class="section-title">Our Customers</h1>
+    <div class="section-line"></div>
+  </div>
+
+  <div class="lookbook-grid">
+
+    <!-- Slot 1 — TALL (spans 2 rows) -->
+    <div class="lookbook-item tall">
+      <div class="lookbook-placeholder">
+        <img src="../assets/Customers/customer1.jpg" alt="Customer Look" style="width:100%;height:100%;object-fit:cover;display:block;">
+      </div>
+      <div class="lookbook-overlay">
+        <span class="lookbook-caption">View Look</span>
+      </div>
+    </div>
+
+    <!-- Slot 2 -->
+    <div class="lookbook-item">
+      <div class="lookbook-placeholder">
+        <img src="../assets/Customers/customer2.jpg" alt="Customer Look" style="width:100%;height:100%;object-fit:cover;display:block;">
+      </div>
+      <div class="lookbook-overlay"><span class="lookbook-caption">View Look</span></div>
+    </div>
+
+    <!-- Slot 3 -->
+    <div class="lookbook-item">
+      <div class="lookbook-placeholder">
+        <img src="../assets/Customers/customer3.jpg" alt="Customer Look" style="width:100%;height:100%;object-fit:cover;display:block;">
+      </div>
+      <div class="lookbook-overlay"><span class="lookbook-caption">View Look</span></div>
+    </div>
+
+    <!-- Slot 4 -->
+    <div class="lookbook-item">
+      <div class="lookbook-placeholder">
+        <img src="../assets/Customers/customer4.jpg" alt="Customer Look" style="width:100%;height:100%;object-fit:cover;display:block;">
+      </div>
+      <div class="lookbook-overlay"><span class="lookbook-caption">View Look</span></div>
+    </div>
+
+    <!-- Slot 5 -->
+    <div class="lookbook-item">
+      <div class="lookbook-placeholder">
+        <img src="../assets/Customers/customer5.png" alt="Customer Look" style="width:100%;height:100%;object-fit:cover;display:block;">
+      </div>
+      <div class="lookbook-overlay"><span class="lookbook-caption">View Look</span></div>
+    </div>
+
+    <!-- Slot 6 -->
+    <div class="lookbook-item">
+      <div class="lookbook-placeholder">
+        <img src="../assets/Customers/customer6.png" alt="Customer Look" style="width:100%;height:100%;object-fit:cover;display:block;">
+      </div>
+      <div class="lookbook-overlay"><span class="lookbook-caption">View Look</span></div>
+    </div>
+
+    <!-- Slot 7 -->
+    <div class="lookbook-item">
+      <div class="lookbook-placeholder">
+        <img src="../assets/Customers/customer7.png" alt="Customer Look" style="width:100%;height:100%;object-fit:cover;display:block;">
+      </div>
+      <div class="lookbook-overlay"><span class="lookbook-caption">View Look</span></div>
+    </div>
+
+    <!-- Slot 8 -->
+    <div class="lookbook-item">
+      <div class="lookbook-placeholder">
+        <img src="../assets/Customers/customer8.jpg" alt="Customer Look" style="width:100%;height:100%;object-fit:cover;display:block;">
+      </div>
+      <div class="lookbook-overlay"><span class="lookbook-caption">View Look</span></div>
+    </div>
+
+  </div>
+
+  <!-- Submit your look banner -->
+  <div class="submit-banner">
+    <h3>Wear Ayeyi Oye? Share Your Look.</h3>
+    <p>Tag us on Instagram @ayeyioye or send your photos to hello@ayeyioye.com<br>
+    and be featured in our next lookbook.</p>
+    <a class="btn-primary" href="contact.html">Get in Touch</a>
+  </div>
+
+</section>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div class="footer-logo">Ayeyi Oye</div>
+  <p class="footer-copy">© 2025 Ayeyi Oye · Accra, Ghana · All rights reserved</p>
+  <div class="footer-social">
+    <a class="social-link" href="#" title="Instagram">ig</a>
+    <a class="social-link" href="#" title="WhatsApp">wa</a>
+    <a class="social-link" href="#" title="Facebook">fb</a>
+  </div>
+</footer>
+
+<div class="toast" id="toast"></div>
+
+<script src="../js/global.js"></script>
+</body>
+</html>

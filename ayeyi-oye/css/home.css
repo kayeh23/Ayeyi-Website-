@@ -1,0 +1,143 @@
+/* ============================================
+   AYEYI OYE — Home Page Styles (index.html)
+   ============================================ */
+
+/* ── HERO ── */
+#hero {
+  min-height: 100vh;
+  background: var(--burgundy-dark);
+  display: grid; grid-template-columns: 1fr 1fr;
+  overflow: hidden; padding-top: 80px;
+}
+.hero-left {
+  display: flex; flex-direction: column; justify-content: center;
+  padding: 6rem 4rem 6rem 5rem;
+}
+.hero-tag {
+  font-size: 0.65rem; letter-spacing: 0.35em; text-transform: uppercase;
+  color: var(--gold); margin-bottom: 1.5rem;
+}
+.hero-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(3rem, 5vw, 5.5rem); font-weight: 300; line-height: 1.05;
+  color: var(--cream); margin-bottom: 1.8rem;
+}
+.hero-title em { font-style: italic; color: var(--gold-light); }
+.hero-sub {
+  color: rgba(253,248,240,0.65); font-size: 0.85rem;
+  line-height: 1.8; max-width: 380px; margin-bottom: 3rem;
+}
+.hero-cta { display: inline-flex; gap: 1rem; }
+
+.hero-right {
+  position: relative; overflow: hidden;
+  background: linear-gradient(135deg, var(--burgundy) 0%, var(--burgundy-dark) 100%);
+}
+.hero-image-placeholder {
+  width: 100%; height: 100%;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center; gap: 1rem;
+  background: linear-gradient(160deg, #8B1A2A 0%, #4a0a12 60%, #2a0508 100%);
+}
+.hero-pattern {
+  position: absolute; inset: 0;
+  background-image:
+    repeating-linear-gradient(45deg,
+      rgba(201,146,42,0.03) 0px, rgba(201,146,42,0.03) 1px,
+      transparent 1px, transparent 40px),
+    repeating-linear-gradient(-45deg,
+      rgba(201,146,42,0.03) 0px, rgba(201,146,42,0.03) 1px,
+      transparent 1px, transparent 40px);
+}
+.hero-accent {
+  position: absolute; bottom: 3rem; left: 3rem;
+  font-family: 'Cormorant Garamond', serif; font-size: 9rem; font-weight: 300;
+  color: rgba(201,146,42,0.07); line-height: 1; user-select: none;
+}
+
+/* ── HERO ANIMATION ── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.hero-left > * { opacity: 0; animation: fadeUp 0.8s forwards; }
+.hero-left .hero-tag   { animation-delay: 0.2s; }
+.hero-left .hero-title { animation-delay: 0.4s; }
+.hero-left .hero-sub   { animation-delay: 0.6s; }
+.hero-left .hero-cta   { animation-delay: 0.8s; }
+
+/* ── FEATURED STRIP ── */
+#featured {
+  background: var(--burgundy);
+  padding: 2rem 4rem;
+  display: flex; align-items: center; justify-content: center; gap: 4rem;
+  overflow: hidden;
+}
+.featured-item {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1rem; font-style: italic; color: var(--gold-pale);
+  letter-spacing: 0.1em; white-space: nowrap;
+}
+.featured-dot {
+  width: 4px; height: 4px; background: var(--gold);
+  border-radius: 50%; flex-shrink: 0;
+}
+
+/* ── PREVIEW GRID (3 products on homepage) ── */
+#preview {
+  background: var(--cream);
+  padding-bottom: 5rem;
+}
+.preview-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 2px; padding: 0 4rem;
+  max-width: 1400px; margin: 0 auto;
+}
+.preview-card {
+  position: relative; overflow: hidden; cursor: pointer;
+  aspect-ratio: 3/4;
+}
+.preview-placeholder {
+  width: 100%; height: 100%;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center; gap: 0.8rem;
+  transition: transform 0.6s ease;
+}
+.preview-card:hover .preview-placeholder { transform: scale(1.04); }
+.preview-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(to top, rgba(74,10,18,0.92) 0%, transparent 55%);
+  opacity: 0; transition: opacity 0.4s;
+  display: flex; flex-direction: column; justify-content: flex-end;
+  padding: 2rem;
+}
+.preview-card:hover .preview-overlay { opacity: 1; }
+.preview-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.4rem; color: var(--cream); margin-bottom: 0.3rem;
+}
+.preview-price { color: var(--gold-light); font-size: 0.85rem; font-weight: 500; }
+.preview-badge {
+  position: absolute; top: 1.2rem; left: 1.2rem;
+  background: var(--gold); color: var(--burgundy-dark);
+  font-size: 0.58rem; letter-spacing: 0.2em; text-transform: uppercase;
+  padding: 0.3rem 0.8rem; font-weight: 600;
+}
+.preview-btn {
+  margin-top: 0.8rem; background: var(--gold); color: var(--burgundy-dark);
+  border: none; padding: 0.65rem; font-size: 0.65rem; letter-spacing: 0.2em;
+  text-transform: uppercase; font-weight: 600; cursor: pointer; width: 100%;
+  font-family: 'Montserrat', sans-serif; transition: background 0.2s;
+}
+.preview-btn:hover { background: var(--gold-light); }
+
+.view-all-wrap { text-align: center; margin-top: 3rem; }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 900px) {
+  #hero { grid-template-columns: 1fr; }
+  .hero-right { display: none; }
+  .hero-left { padding: 4rem 2rem; }
+  #featured { gap: 1.5rem; padding: 1.5rem 2rem; flex-wrap: wrap; }
+  .preview-grid { grid-template-columns: repeat(2, 1fr); padding: 0 1rem; }
+}

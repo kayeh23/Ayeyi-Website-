@@ -1,0 +1,75 @@
+/* ============================================
+   AYEYI OYE — Lookbook Page Styles
+   ============================================ */
+
+#lookbook-page {
+  background: var(--burgundy-dark);
+  min-height: 100vh;
+  padding-top: 80px;
+  padding-bottom: 5rem;
+}
+#lookbook-page .section-title { color: var(--cream); }
+
+/* ── MASONRY-STYLE GRID ── */
+.lookbook-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 3px; padding: 0 4rem;
+  max-width: 1400px; margin: 0 auto;
+}
+.lookbook-item {
+  position: relative; overflow: hidden; cursor: pointer;
+  background: linear-gradient(135deg, #8B1A2A 0%, #4a0a12 100%);
+  aspect-ratio: 2/3;
+}
+.lookbook-item.tall { grid-row: span 2; aspect-ratio: auto; min-height: 500px; }
+
+.lookbook-placeholder {
+  width: 100%; height: 100%; min-height: 200px;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center; gap: 0.5rem;
+}
+.lookbook-placeholder .placeholder-icon { font-size: 2rem; color: rgba(201,146,42,0.3); }
+.lookbook-placeholder .placeholder-label {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 0.85rem; color: rgba(201,146,42,0.3); letter-spacing: 0.1em;
+}
+
+.lookbook-overlay {
+  position: absolute; inset: 0;
+  background: rgba(74,10,18,0.6);
+  opacity: 0; transition: opacity 0.3s;
+  display: flex; align-items: flex-end;
+  padding: 1.5rem;
+}
+.lookbook-item:hover .lookbook-overlay { opacity: 1; }
+.lookbook-caption {
+  color: var(--gold-pale); font-size: 0.72rem;
+  letter-spacing: 0.2em; text-transform: uppercase;
+  border-bottom: 1px solid var(--gold); padding-bottom: 0.3rem;
+}
+
+/* ── SUBMIT BANNER ── */
+.submit-banner {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: rgba(201,146,42,0.08);
+  margin: 4rem 4rem 0;
+  border: 1px solid rgba(201,146,42,0.15);
+}
+.submit-banner h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.8rem; font-weight: 300;
+  color: var(--gold-pale); margin-bottom: 0.8rem;
+}
+.submit-banner p {
+  color: rgba(253,248,240,0.5); font-size: 0.82rem;
+  margin-bottom: 1.5rem; line-height: 1.7;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 900px) {
+  .lookbook-grid { grid-template-columns: repeat(2, 1fr); padding: 0 1rem; }
+  .lookbook-item.tall { grid-row: auto; min-height: auto; aspect-ratio: 2/3; }
+  .submit-banner { margin: 2rem 1rem 0; }
+}

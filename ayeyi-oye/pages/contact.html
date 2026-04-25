@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order — Ayeyi Oye</title>
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/contact.css">
+</head>
+<body>
+
+<!-- ── NAVIGATION ── -->
+<nav>
+  <a class="nav-logo" href="../index.html">Ayeyi Oye</a>
+  <ul class="nav-links">
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="collection.html">Collection</a></li>
+    <li><a href="lookbook.html">Lookbook</a></li>
+    <li><a href="about.html">Our Story</a></li>
+    <li><a href="contact.html">Order</a></li>
+  </ul>
+  <button class="nav-cart" onclick="showCart()">🛍 Cart (<span id="cart-count">0</span>)</button>
+</nav>
+
+<!-- ── CONTACT PAGE ── -->
+<section id="contact-page">
+  <div class="section-header">
+    <span class="section-tag">— Get In Touch —</span>
+    <h1 class="section-title">Place an Order</h1>
+    <div class="section-line"></div>
+  </div>
+
+  <div class="contact-wrapper">
+
+    <!-- Info Panel -->
+    <div class="contact-info">
+      <h3>Let's Create Something Beautiful</h3>
+      <p>
+        All pieces are made-to-order. Reach out to discuss your sizing, fabric preferences,
+        and delivery timeline. We ship across Ghana and internationally.
+      </p>
+      <div class="contact-detail">
+        <div class="contact-detail-icon">📍</div>
+        <span class="contact-detail-text">Accra, Ghana</span>
+      </div>
+      <div class="contact-detail">
+        <div class="contact-detail-icon">📞</div>
+        <span class="contact-detail-text">+233 (0) 000 000 000</span>
+      </div>
+      <div class="contact-detail">
+        <div class="contact-detail-icon">✉️</div>
+        <span class="contact-detail-text">hello@ayeyioye.com</span>
+      </div>
+      <div class="contact-detail">
+        <div class="contact-detail-icon">📱</div>
+        <span class="contact-detail-text">Instagram: @ayeyioye</span>
+      </div>
+      <div class="contact-detail">
+        <div class="contact-detail-icon">💬</div>
+        <span class="contact-detail-text">WhatsApp: +233 (0) 000 000 000</span>
+      </div>
+    </div>
+
+    <!-- Order Form -->
+    <form class="contact-form" onsubmit="submitOrder(event)">
+      <div class="form-row">
+        <div class="form-field">
+          <label>First Name</label>
+          <input type="text" placeholder="Ama" required>
+        </div>
+        <div class="form-field">
+          <label>Last Name</label>
+          <input type="text" placeholder="Mensah" required>
+        </div>
+      </div>
+      <div class="form-field">
+        <label>Email</label>
+        <input type="email" placeholder="you@example.com" required>
+      </div>
+      <div class="form-field">
+        <label>Phone / WhatsApp</label>
+        <input type="tel" placeholder="+233 ...">
+      </div>
+      <div class="form-field">
+        <label>Item of Interest</label>
+        <select>
+          <option value="">Select a category</option>
+          <option>Dress — Occasion Wear</option>
+          <option>Dress — Casual</option>
+          <option>Women's Top</option>
+          <option>Men's Top</option>
+          <option>Custom / Bespoke Piece</option>
+        </select>
+      </div>
+      <div class="form-field">
+        <label>Your Measurements (optional)</label>
+        <input type="text" placeholder="e.g. Bust 36, Waist 28, Hips 38">
+      </div>
+      <div class="form-field">
+        <label>Message / Details</label>
+        <textarea placeholder="Tell us about the occasion, fabric preferences, colour, or any special requests..."></textarea>
+      </div>
+      <button type="submit" class="submit-btn">Send Enquiry</button>
+    </form>
+
+  </div>
+
+  <!-- Map section -->
+  <div class="map-section" style="max-width: 1200px; margin: 0 auto; padding: 0 4rem 4rem;">
+    <p style="color:rgba(201,146,42,0.5); font-size:0.62rem; letter-spacing:0.3em; text-transform:uppercase; text-align: center;">Find Us</p>
+    <div class="map-container" style="width: 100%; height: 400px; margin-top: 1rem;">
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3971.046370529929!2d-0.2447292!3d5.5601459!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdf970be7093a41%3A0x10bd36e713321ac1!2sAyeyi%20Oye!5e0!3m2!1sen!2sgh!4v1774892273257!5m2!1sen!2sgh" 
+        width="100%" 
+        height="100%" 
+        style="border:0; border-radius: 8px;" 
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+  </div>
+
+</section>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div class="footer-logo">Ayeyi Oye</div>
+  <p class="footer-copy">© 2025 Ayeyi Oye · Accra, Ghana · All rights reserved</p>
+  <div class="footer-social">
+    <a class="social-link" href="https://www.instagram.com/ayeyioye/" title="Instagram">ig</a>
+    <a class="social-link" href="https://wa.me/233545354977" title="WhatsApp">wa</a>
+    <a class="social-link" href="https://www.facebook.com/ayeyioye" title="Facebook">fb</a>
+    <a class="social-link" href="https://www.tiktok.com/@_ayeyioye" title="Tiktok">Tk</a>
+  </div>
+</footer>
+
+<div class="toast" id="toast"></div>
+
+<script src="../js/global.js"></script>
+<script src="../js/contact.js"></script>
+</body>
+</html>

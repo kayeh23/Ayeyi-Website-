@@ -1,0 +1,92 @@
+/* ============================================
+   AYEYI OYE — Collection Page Styles
+   ============================================ */
+
+/* ── PAGE HEADER ── */
+.page-hero {
+  padding-top: 80px;
+  background: var(--burgundy-dark);
+  text-align: center;
+  padding-bottom: 3rem;
+}
+.page-hero .section-tag { margin-top: 3rem; display: block; }
+.page-hero .section-title { color: var(--cream); }
+.page-hero .section-line { background: var(--gold); }
+
+/* ── FILTER TABS ── */
+#collection { background: var(--cream); padding-bottom: 5rem; }
+
+.filter-tabs {
+  display: flex; justify-content: center; gap: 0.5rem;
+  padding: 3rem 2rem 3rem;
+}
+.filter-tab {
+  padding: 0.6rem 1.8rem; font-size: 0.68rem; letter-spacing: 0.2em;
+  text-transform: uppercase; border: 1px solid rgba(107,15,26,0.2);
+  background: transparent; color: var(--text); cursor: pointer;
+  transition: all 0.3s; font-family: 'Montserrat', sans-serif;
+}
+.filter-tab.active, .filter-tab:hover {
+  background: var(--burgundy); color: var(--gold-pale);
+  border-color: var(--burgundy);
+}
+
+/* ── PRODUCTS GRID ── */
+.products-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 2px; padding: 0 4rem;
+  max-width: 1400px; margin: 0 auto;
+}
+.product-card {
+  position: relative; overflow: hidden; cursor: pointer;
+  background: #f0e8d8; aspect-ratio: 3/4; display: none;
+}
+.product-card.visible { display: block; }
+
+.product-placeholder {
+  width: 100%; height: 100%;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center; gap: 0.8rem;
+  transition: transform 0.6s ease;
+}
+.product-card:hover .product-placeholder { transform: scale(1.04); }
+
+.placeholder-icon { font-size: 3rem; opacity: 0.3; }
+.placeholder-label {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1rem; color: rgba(107,15,26,0.4); letter-spacing: 0.1em;
+}
+
+.product-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(to top, rgba(74,10,18,0.92) 0%, transparent 55%);
+  opacity: 0; transition: opacity 0.4s;
+  display: flex; flex-direction: column; justify-content: flex-end;
+  padding: 2rem;
+}
+.product-card:hover .product-overlay { opacity: 1; }
+
+.product-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.4rem; font-weight: 400; color: var(--cream); margin-bottom: 0.3rem;
+}
+.product-price { color: var(--gold-light); font-size: 0.85rem; font-weight: 500; }
+.product-tag-badge {
+  position: absolute; top: 1.2rem; left: 1.2rem;
+  background: var(--gold); color: var(--burgundy-dark);
+  font-size: 0.58rem; letter-spacing: 0.2em; text-transform: uppercase;
+  padding: 0.3rem 0.8rem; font-weight: 600;
+}
+.add-to-cart-btn {
+  margin-top: 0.8rem; background: var(--gold); color: var(--burgundy-dark);
+  border: none; padding: 0.65rem; font-size: 0.65rem; letter-spacing: 0.2em;
+  text-transform: uppercase; font-weight: 600; cursor: pointer; width: 100%;
+  font-family: 'Montserrat', sans-serif; transition: background 0.2s;
+}
+.add-to-cart-btn:hover { background: var(--gold-light); }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 900px) {
+  .products-grid { grid-template-columns: repeat(2, 1fr); padding: 0 1rem; }
+  .filter-tabs { flex-wrap: wrap; }
+}

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ayeyi Oye — Ghanaian Fashion</title>
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+
+<!-- ── NAVIGATION ── -->
+<nav>
+  <a class="nav-logo" href="index.html">
+<img src="assets/logo.jpg" alt="Ayeyi Oye Logo" class="logo-img">
+</a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="pages/collection.html">Collection</a></li>
+    <li><a href="pages/lookbook.html">Lookbook</a></li>
+    <li><a href="pages/about.html">Our Story</a></li>
+    <li><a href="pages/contact.html">Order</a></li>
+  </ul>
+  <button class="nav-cart" onclick="showCart()">🛍 Cart (<span id="cart-count">0</span>)</button>
+</nav>
+
+<!-- ── HERO ── -->
+<section id="hero">
+  <div class="hero-left">
+    <p class="hero-tag">Accra · Ghana · Perfectly Crafted Fashion</p>
+    <h1 class="hero-title">
+      Dress with<br>                  
+      <em>Grace &</em><br>
+      Intention.
+    </h1>
+    <p class="hero-sub">
+      Ayeyi Oye blends modern minimalism with the soul of Ghanaian craftsmanship.
+      Each piece is made to be worn, remembered, and passed down.
+    </p>
+    <div class="hero-cta">
+      <a class="btn-primary" href="pages/collection.html">Shop Collection</a>
+      <a class="btn-outline" href="pages/lookbook.html">View Lookbook</a>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="hero-pattern"></div>
+    <div class="hero-image-placeholder">
+      <img src="assets/logo.jpg" alt="Ayeyi Oye Fashion" style="width:100%; height:100%; object-fit:cover;">
+    </div>
+    <div class="hero-accent"></div>
+  </div>
+</section>
+
+<!-- ── MARQUEE STRIP ── -->
+<div id="featured">
+  <span class="featured-item">Dresses</span>
+  <span class="featured-dot"></span>
+  <span class="featured-item">Women's Tops</span>
+  <span class="featured-dot"></span>
+  <span class="featured-item">Men's Tops</span>
+  <span class="featured-dot"></span>
+  <span class="featured-item">Made to Order</span>
+  <span class="featured-dot"></span>
+  <span class="featured-item">Ships Nationwide</span>
+  <span class="featured-dot"></span>
+  <span class="featured-item">100% Handmade</span>
+</div>
+
+<!-- ── FEATURED PRODUCTS (3 picks) ── -->
+<section id="preview">
+  <div class="section-header">
+    <span class="section-tag">— Featured —</span>
+    <h2 class="section-title">New This Season</h2>
+    <div class="section-line"></div>
+  </div>
+
+  <div class="preview-grid">
+
+    <!-- Card 1 -->
+    <div class="preview-card">
+      <div class="preview-placeholder" style="background:#c4a882;">
+        <img src="assets/top featured/sompabday.jpg" alt="Celestial Wrap Dress" style="width:100%;height:100%;object-fit:cover;">
+      </div>
+      <span class="preview-badge">New</span>
+      <div class="preview-overlay">
+        <div class="preview-name">Celestial Wrap Dress</div>
+        <div class="preview-price">GH₵ 480</div>
+        <button class="preview-btn" onclick="addToCart('Celestial Wrap Dress','GH₵ 480')">Add to Cart</button>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="preview-card">
+      <div class="preview-placeholder" style="background:#b8a080;">
+        <img src="assets/top featured/kafui.jpg" alt="Classic Linen Kaftan" style="width:100%;height:100%;object-fit:cover;display:block;">
+      </div>
+      <span class="preview-badge">Bestseller</span>
+      <div class="preview-overlay">
+        <div class="preview-name">Classic Linen Kaftan</div>
+        <div class="preview-price">GH₵ 380</div>
+        <button class="preview-btn" onclick="addToCart('Classic Linen Kaftan','GH₵ 380')">Add to Cart</button>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="preview-card">
+      <div class="preview-placeholder" style="background:#b8a080;">
+        <img src="assets/top featured/scala.jpg" alt="Classic Linen Kaftan" style="width:100%;height:100%;object-fit:cover;display:block;">
+      </div>
+      <span class="preview-badge">Bestseller</span>
+      <div class="preview-overlay">
+        <div class="preview-name">Scala</div>
+        <div class="preview-price">GH₵ 380</div>
+        <button class="preview-btn" onclick="addToCart('Scala','GH₵ 380')">Add to Cart</button>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="view-all-wrap">
+    <a class="btn-primary" href="pages/collection.html">View Full Collection</a>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div class="footer-logo">Ayeyi Oye</div>
+  <p class="footer-copy">© 2025 Ayeyi Oye · Accra, Ghana · All rights reserved</p>
+  <div class="footer-social">
+    <a class="social-link" href="#" title="Instagram">ig</a>
+    <a class="social-link" href="#" title="WhatsApp">wa</a>
+    <a class="social-link" href="#" title="Facebook">fb</a>
+  </div>
+</footer>
+
+<div class="toast" id="toast"></div>
+
+<script src="js/global.js"></script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Collection — Ayeyi Oye</title>
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/collection.css">
+</head>
+<body>
+
+<!-- ── NAVIGATION ── -->
+<nav>
+  <a class="nav-logo" href="../index.html">Ayeyi Oye</a>
+  <ul class="nav-links">
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="collection.html">Collection</a></li>
+    <li><a href="lookbook.html">Lookbook</a></li>
+    <li><a href="about.html">Our Story</a></li>
+    <li><a href="contact.html">Order</a></li>
+  </ul>
+  <button class="nav-cart" onclick="showCart()">🛍 Cart (<span id="cart-count">0</span>)</button>
+</nav>
+
+<!-- ── PAGE HEADER ── -->
+<div class="page-hero">
+  <span class="section-tag">— Shop —</span>
+  <h1 class="section-title">The Collection</h1>
+  <div class="section-line"></div>
+</div>
+
+<!-- ── COLLECTION ── -->
+<section id="collection">
+  <div class="filter-tabs">
+    <button class="filter-tab active" onclick="filterProducts('all', this)">All Pieces</button>
+    <button class="filter-tab" onclick="filterProducts('dress', this)">Dresses</button>
+    <button class="filter-tab" onclick="filterProducts('women', this)">Women's Tops</button>
+    <button class="filter-tab" onclick="filterProducts('men', this)">Men's Tops</button>
+  </div>
+
+  <div class="products-grid" id="products-grid">
+    <!-- Rendered by collection.js -->
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div class="footer-logo">Ayeyi Oye</div>
+  <p class="footer-copy">© 2025 Ayeyi Oye · Accra, Ghana · All rights reserved</p>
+  <div class="footer-social">
+    <a class="social-link" href="#" title="Instagram">ig</a>
+    <a class="social-link" href="#" title="WhatsApp">wa</a>
+    <a class="social-link" href="#" title="Facebook">fb</a>
+  </div>
+</footer>
+
+<div class="toast" id="toast"></div>
+
+<script src="../js/global.js"></script>
+<script src="../js/collection.js"></script>
+</body>
+</html>

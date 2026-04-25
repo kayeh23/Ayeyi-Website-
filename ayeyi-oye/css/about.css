@@ -1,0 +1,96 @@
+/* ============================================
+   AYEYI OYE — About Page Styles
+   ============================================ */
+
+#about-page { padding-top: 80px; }
+
+/* ── SPLIT SECTION ── */
+.about-split {
+  display: grid; grid-template-columns: 1fr 1fr;
+  min-height: 80vh;
+}
+.about-image {
+  background: linear-gradient(135deg, var(--burgundy) 0%, var(--burgundy-dark) 100%);
+  display: flex; align-items: center; justify-content: center;
+  padding: 4rem; position: relative; overflow: hidden;
+}
+.about-image-text {
+  font-family: 'Cormorant Garamond', serif; font-size: 7rem; font-weight: 300;
+  color: rgba(201,146,42,0.08); line-height: 1;
+  position: absolute; bottom: 2rem; right: 2rem; text-align: right;
+}
+.about-logo-display {
+  width: 200px; z-index: 1;
+  border: 1px solid rgba(201,146,42,0.2);
+  padding: 3rem;
+  background: rgba(74,10,18,0.4);
+  text-align: center;
+}
+.about-logo-display .logo-letters {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 3.5rem; color: var(--gold); line-height: 1;
+}
+.about-logo-display .logo-name {
+  margin-top: 0.8rem; font-size: 0.65rem;
+  letter-spacing: 0.25em; color: rgba(201,146,42,0.6); text-transform: uppercase;
+}
+
+.about-content {
+  padding: 6rem 5rem;
+  display: flex; flex-direction: column; justify-content: center;
+  background: var(--cream);
+}
+.about-content .section-tag { text-align: left; }
+.about-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2rem, 3vw, 2.8rem); font-weight: 300;
+  color: var(--burgundy-dark); line-height: 1.25; margin: 0.5rem 0 1.5rem;
+}
+.about-text {
+  color: rgba(58,26,32,0.75); font-size: 0.88rem;
+  line-height: 1.9; margin-bottom: 1rem;
+}
+.about-stats {
+  display: flex; gap: 3rem; margin-top: 2.5rem;
+  padding-top: 2.5rem; border-top: 1px solid rgba(107,15,26,0.1);
+}
+.stat-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.5rem; font-weight: 300; color: var(--burgundy); display: block;
+}
+.stat-label {
+  font-size: 0.62rem; letter-spacing: 0.2em; text-transform: uppercase;
+  color: rgba(58,26,32,0.5);
+}
+
+/* ── VALUES SECTION ── */
+.values-section {
+  background: var(--dark);
+  padding: 5rem 4rem;
+}
+.values-section .section-title { color: var(--cream); }
+.values-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 2rem; max-width: 1100px; margin: 3rem auto 0;
+}
+.value-card {
+  border: 1px solid rgba(201,146,42,0.15);
+  padding: 2.5rem;
+  background: rgba(201,146,42,0.04);
+}
+.value-icon { font-size: 2rem; margin-bottom: 1rem; }
+.value-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.4rem; color: var(--gold-light); margin-bottom: 0.8rem;
+}
+.value-text { color: rgba(253,248,240,0.55); font-size: 0.83rem; line-height: 1.8; }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 900px) {
+  .about-split { grid-template-columns: 1fr; }
+  .about-image { min-height: 300px; }
+  .about-content { padding: 3rem 2rem; }
+  .about-stats { gap: 1.5rem; }
+  .values-section { padding: 3rem 2rem; }
+  .values-grid { grid-template-columns: 1fr; gap: 1rem; }
+}
