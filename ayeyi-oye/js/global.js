@@ -14,6 +14,22 @@ function saveCart() {
   localStorage.setItem('ao_cart', JSON.stringify(cartItems));
 }
 
+function clearCart() {
+  cartItems = [];
+  saveCart();
+  updateCartUI();
+}
+
+function getCartSummary() {
+  if (!cartItems.length) {
+    return 'No cart items selected.';
+  }
+
+  return cartItems
+    .map(item => `${item.qty} x ${item.name} (${item.price})`)
+    .join('\n');
+}
+
 function addToCart(name, price) {
   const existing = cartItems.find(i => i.name === name);
   if (existing) {

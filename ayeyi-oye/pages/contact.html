@@ -6,6 +6,7 @@
   <title>Order — Ayeyi Oye</title>
   <link rel="stylesheet" href="../css/global.css">
   <link rel="stylesheet" href="../css/contact.css">
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 </head>
 <body>
 
@@ -14,7 +15,7 @@
   <a class="nav-logo" href="../index.html">Ayeyi Oye</a>
   <ul class="nav-links">
     <li><a href="../index.html">Home</a></li>
-    <li><a href="collection.html">Collection</a></li>
+    <li><a href="collection.html">Collection</a></li>2
     <li><a href="lookbook.html">Lookbook</a></li>
     <li><a href="about.html">Our Story</a></li>
     <li><a href="contact.html">Order</a></li>
@@ -41,15 +42,15 @@
       </p>
       <div class="contact-detail">
         <div class="contact-detail-icon">📍</div>
-        <span class="contact-detail-text">Accra, Ghana</span>
+        <span class="contact-detail-text">Volta Avenue Extension, Accra</span>
       </div>
       <div class="contact-detail">
         <div class="contact-detail-icon">📞</div>
-        <span class="contact-detail-text">+233 (0) 000 000 000</span>
+        <span class="contact-detail-text">+233 (0) 545 354 977</span>
       </div>
       <div class="contact-detail">
         <div class="contact-detail-icon">✉️</div>
-        <span class="contact-detail-text">hello@ayeyioye.com</span>
+        <span class="contact-detail-text">ayeyioyebampoe@gmail.com</span>
       </div>
       <div class="contact-detail">
         <div class="contact-detail-icon">📱</div>
@@ -66,24 +67,24 @@
       <div class="form-row">
         <div class="form-field">
           <label>First Name</label>
-          <input type="text" placeholder="Ama" required>
+          <input type="text" name="firstName" placeholder="Ama" required>
         </div>
         <div class="form-field">
           <label>Last Name</label>
-          <input type="text" placeholder="Mensah" required>
+          <input type="text" name="lastName" placeholder="Mensah" required>
         </div>
       </div>
       <div class="form-field">
         <label>Email</label>
-        <input type="email" placeholder="you@example.com" required>
+        <input type="email" name="email" placeholder="you@example.com" required>
       </div>
       <div class="form-field">
         <label>Phone / WhatsApp</label>
-        <input type="tel" placeholder="+233 ...">
+        <input type="tel" name="phone" placeholder="+233 ...">
       </div>
       <div class="form-field">
         <label>Item of Interest</label>
-        <select>
+        <select name="itemOfInterest" required>
           <option value="">Select a category</option>
           <option>Dress — Occasion Wear</option>
           <option>Dress — Casual</option>
@@ -94,11 +95,11 @@
       </div>
       <div class="form-field">
         <label>Your Measurements (optional)</label>
-        <input type="text" placeholder="e.g. Bust 36, Waist 28, Hips 38">
+        <input type="text" name="measurements" placeholder="e.g. Bust 36, Waist 28, Hips 38">
       </div>
       <div class="form-field">
         <label>Message / Details</label>
-        <textarea placeholder="Tell us about the occasion, fabric preferences, colour, or any special requests..."></textarea>
+        <textarea name="details" placeholder="Tell us about the occasion, fabric preferences, colour, or any special requests..."></textarea>
       </div>
       <button type="submit" class="submit-btn">Send Enquiry</button>
     </form>
